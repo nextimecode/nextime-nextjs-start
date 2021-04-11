@@ -1,6 +1,6 @@
 {
   "name": "nextstart",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
     "lint": "eslint --fix .",
     "stylelint": "stylelint ./src/**/*.scss",
     "precommit": "yarn lint && yarn stylelint",
-    "prepush": "yarn build"
+    "prepush": "git fetch origin main && git pull origin main && yarn && yarn build"
   },
   "dependencies": {
     "@hapi/cryptiles": "^5.1.0",
